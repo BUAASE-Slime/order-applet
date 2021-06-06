@@ -1,2 +1,0 @@
-# Oms
-Java Work
