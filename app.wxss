@@ -1,0 +1,36 @@
+
+.line_1px {
+  height: 1px;
+  background: rgb(244,244,244)
+}
+.right_arrow {
+  border: solid rgb(121,0,121);
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  position: absolute;
+   margin-left: 75%; 
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: rgb(244,244,244);
+}
+/*个人中心全局统一布局  */
+.my_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 17px;
+  background: white;
+}
+.line_5px {
+  height: 15px;
+}
+.line_8pt {
+  height: 8pt;
+}
+
