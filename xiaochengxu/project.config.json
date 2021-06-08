@@ -4,13 +4,13 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": false,
     "postcss": true,
     "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": false,
+    "minified": false,
+    "newFeature": true,
     "coverView": true,
     "nodeModules": false,
     "autoAudits": false,
@@ -40,18 +40,17 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.17.0",
+  "libVersion": "2.10.3",
+  "cloudfunctionRoot": "functions/",
   "appid": "wx68423570aefa48df",
-  "projectname": "xiaochengxu",
+  "projectname": "%E6%95%99%E5%AD%A6-%E7%82%B9%E9%A4%90%E5%B0%8F%E7%A8%8B%E5%BA%8F0707",
   "debugOptions": {
     "hidedInDevtools": []
   },
-  "scripts": {},
-  "staticServerOptions": {
-    "baseURL": "",
-    "servePath": ""
-  },
   "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []
@@ -59,17 +58,82 @@
     "conversation": {
       "list": []
     },
-    "game": {
+    "plugin": {
       "list": []
     },
-    "plugin": {
+    "game": {
+      "currentL": -1,
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "id": 1,
+          "name": "我的菜单",
+          "pathName": "pages/myOrder/myOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "我的评价",
+          "pathName": "pages/mycomment/mycomment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "pages/buy/buy",
+          "pathName": "pages/buy/buy",
+          "query": "tableNum=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "确认订单",
+          "pathName": "pages/confirmOrder/confirmOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "修改",
+          "pathName": "pages/change/change",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/change/change",
+          "pathName": "pages/change/change",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/mycomment/mycomment",
+          "pathName": "pages/mycomment/mycomment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

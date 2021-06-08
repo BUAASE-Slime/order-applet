@@ -1,23 +1,39 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
+<!-- 轮播图 -->
+<view>
+<view>
+  <swiper indicator-dots="{{true}}" indicator-color="#790079" autoplay="true" circular="true">
+    <block wx:for="{{banner}}" wx:key="banner">
+      <swiper-item>
+        <image src='{{item.picUrl}}' mode="aspectFill" style="width:100%;height:100%;" />
+      </swiper-item>
     </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  </swiper>
+</view>
+<view class="mainPanel">
+  
+
+<view class="category-panel1">
+  <view class="category-panel2">
+    <view class="category-item-ad" bindtap='btnclick1'>
+      <!-- <image class="category-item-image1" src="/image/diancan.png" /> -->
+      <image class="category-item-image1" src="/image/diancan.png" />
+      <view class="category-item">点此扫码点餐哦~</view>
+    </view>  
+
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="category-panel3">
+    <view class="category-item-ads" bindtap='btnclick2'>
+        <image class="category-item-image3" src="/image/diancan.jpg" />
+    </view>
+     
   </view>
+  <view class="category-panel3">
+    <view class="category-item-ads" bindtap='btnclick4'>
+        <image class="category-item-image3" src="/image/houtaiduan.jpg" />
+    </view>
+     
+  </view>
+
+</view>
+</view>
 </view>

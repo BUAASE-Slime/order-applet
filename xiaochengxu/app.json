@@ -1,14 +1,38 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/edit/edit",
+    "pages/confirm/confirm",
+    "pages/myOrder/myOrder",
+    "pages/my/my",
+    "pages/Food/food",
+    "pages/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#790049",
+    "navigationBarTitleText": "个人中心",
+    "navigationBarTextStyle": "white"
   },
-  "style": "v2",
+  "tabBar": {
+    "color": "#C5C5C5",
+    "selectedColor": "#790049",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "image/home.png",
+        "iconPath": "image/homea.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+
+      {
+        "selectedIconPath": "image/my.png",
+        "iconPath": "image/mya.png",
+        "pagePath": "pages/my/my",
+        "text": "个人"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

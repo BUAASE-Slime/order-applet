@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "902003",
+      "name": "find",
+      "font_class": "find",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "1810152",
+      "name": "home",
+      "font_class": "icon-test",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "11686860",
+      "name": "my",
+      "font_class": "my",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "21643424",
+      "name": "杯子蛋糕",
+      "font_class": "beizidangao",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "21643428",
+      "name": "汉堡",
+      "font_class": "hanbao",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "21643429",
+      "name": "鸡腿",
+      "font_class": "jitui",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "21643430",
+      "name": "蛋糕 ",
+      "font_class": "dangao",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    }
+  ]
+}

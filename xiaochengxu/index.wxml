@@ -1,0 +1,32 @@
+<!-- 轮播图 -->
+
+<view>
+  <swiper indicator-dots="{{true}}" indicator-color="#f4c903" autoplay="true" circular="true">
+    <block wx:for="{{banner}}" wx:key="banner">
+      <swiper-item>
+        <image src='{{item.picUrl}}' mode="aspectFill" style="width:100%;height:100%;" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 搜索框 -->
+<view class="searchRoot">
+  <input class="searchInput" bindinput="getSearchKey" placeholder="搜索菜品"></input>
+  <image class="searchImg" bindtap="goSearch" src="../../image/sousuo.png"></image>
+</view>
+
+
+<view class="category-panel1">
+  <view class="category-panel2">
+    <view bindtap='btnclick1' class="category-item">
+      <image class="category-item-image" src="/image/xiangji.png" />
+      <text class="category-item-text">请先扫描桌上的二维码</text>
+    </view>
+    <view bindtap='btnclick2' class="category-item">
+      <image class="category-item-image" src="/image/canyin.png" />
+      <text class="category-item-text">菜单浏览</text>
+    </view>
+  </view>
+
+</view>

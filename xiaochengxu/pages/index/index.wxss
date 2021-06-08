@@ -1,19 +1,126 @@
 /**index.wxss**/
-.userinfo {
+/*总体面板*/
+.mainPanel{
+  height:100%;
+  background: rgb(244,244,244);
+
+}
+
+/*分割线样式*/
+.divLine{
+  background: #E0E3DA;
+  width: 2px;
+  height: 100%;
+ }
+ .category-item-text {
+  margin-top: 3px;
+}
+
+.category-item-text1 {
+  margin-bottom: 5px;
+}
+.category-item-text2 {
+  margin-bottom: 6px;
+}
+
+.category-panel1 {
+  height: 360px;
+  width: 100%;
   display: flex;
+  color: #666;
   flex-direction: column;
+  font-size: 11px;
+  justify-content: space-around;
   align-items: center;
-  color: #aaa;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.category-panel2 {
+  height: 90px;
+  width: 90%;
+  display: flex;
+  color: #666;
+  flex-direction: row;
+  font-size: 11px;
+  justify-content: space-around;
+  border-radius: 20rpx;
+
+   background-color: white;
 }
 
-.usermotto {
-  margin-top: 200px;
+.category-panel3 {
+  height: 120px;
+  width: 90%;
+  display: flex;
+  color: #666;
+  flex-direction: row;
+  font-size: 11px;
+  justify-content: space-around;
+  border-radius: 20rpx;
+
+   background-color: white;
 }
+
+.category-item {
+  width: 130px;
+  height: 50px;
+  padding: 16px 12px 0 6px;
+  float:left;
+  line-height:30px;
+  font-size:15px;
+  margin-top:10px;
+  margin-left:20px;
+ color:black;
+ font-weight:600;
+}
+
+.category-item-ad {
+  position: flex; 
+  flex-direction: row !important;
+  width: 100%; 
+  height: 100%; 
+  transform: translate(0%, 0px) translateZ(0px);
+  border-radius: 20rpx !important;
+  margin-left:10%;
+}
+.category-item-ads {
+  position: flex; 
+  width: 100%; 
+  height: 100%; 
+  transform: translate(0%, 0px) translateZ(0px);
+  border-radius: 20rpx !important;
+}
+.category-item-image {
+  width: 50px;
+  height: 50px;
+  overflow: unset;
+  /* padding: 15px 12px 0 6px; */
+}
+
+.category-item-image1 {
+  width: 50px;
+  height: 50px;
+  padding: 16px 12px 0 6px;
+  float:left;
+}
+.category-item-image3 {
+ height:100% !important;
+  width:100% !important;
+
+}
+.category-item-image2 {
+  height:100% !important;
+   width:100% !important;
+ 
+ }
+
+.kf_button {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0px 0px 0px 0px;
+  border: 0px;
+}
+
+.kf_button::after {
+  border: 0px;
+}
+
+
