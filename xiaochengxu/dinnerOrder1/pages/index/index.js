@@ -61,21 +61,21 @@ Page({
     wx.setStorageSync("tableNum", tableNum)
     //把菜品搜索词条保存起来
     wx.navigateTo({
-      url: '../Food/food'
+      url: ''
     })
   },
 
   //菜品浏览
   btnclick2: function() {
     wx.navigateTo({
-      url: '../Food/food'
+      url: ''
     })
   },
 
   btnclick4: function() {
     console.log("跳转到后台小程序啦！")
     wx.navigateTo({
-      url: '/pages/paihao/paihao',
+      url: '',
     })
   } 
   ,
