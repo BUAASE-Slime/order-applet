@@ -7,10 +7,10 @@ import lombok.Getter;
  */
 
 @Getter
-public class AdminStatusEnum implements CodeNumEnum {
+public enum AdminStatusEnum implements CodeNumEnum {
     //2：管理员可以管理所有，1：员工只可以管理菜品和订单
     SUPER_ADMIN(2, "管理员"),
-    YUANGONG(1, "员工");
+    WAITER(1, "员工");
 
     private Integer code;
     private String message;

@@ -3,7 +3,7 @@ package com.example.demo.enums;
 import lombok.Getter;
 
 @Getter
-public class ResultEnum {
+public enum ResultEnum {
 
     SUCCESS(0, "成功"),
 
@@ -42,8 +42,6 @@ public class ResultEnum {
     LOGIN_FAIL(25, "登录失败, 登录信息不正确"),
 
     LOGOUT_SUCCESS(26, "登出成功"),
-    PAIHAO_NOT_EXIST(27, "排号不存在"),
-    PAIHAO_STATUS_ERROR(28, "用户已入座"),
             ;
 
     private Integer code;
