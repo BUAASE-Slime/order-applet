@@ -9,7 +9,7 @@
 ```python
 .
 ├─data              # 菜品类目、商品、轮播图等数据资源
-├─pages				# 页面展示
+├─pages             # 页面展示
 ├─springboot        # 后端框架
 ├─xiaochengxu       # 小程序代码
 └─README.md
