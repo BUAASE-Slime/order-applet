@@ -27,7 +27,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/leimu")
 @Slf4j
-public class AdminLeiMuController {
+public class AdminTypeController {
 
     @Autowired
     private TypeRepository repository;
