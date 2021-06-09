@@ -68,7 +68,7 @@ public class AdminFoodController {
                         ModelMap map) {
         if (foodId != null) {
             Food food = foodRepository.findById(foodId).orElse(null);
-            map.put("food", food);
+            map.put("templates/food", food);
         }
         //查询所有的类目
         List<Type> leimuList = leiMuRepository.findAll();
