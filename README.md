@@ -9,8 +9,10 @@
 ```python
 .
 ├─data              # 菜品类目、商品、轮播图等数据资源
+├─pages				# 页面展示
 ├─springboot        # 后端框架
-└─xiaochengxu       # 小程序代码
+├─xiaochengxu       # 小程序代码
+└─README.md
 ```
 
 ### 项目功能
@@ -21,3 +23,17 @@
 - [x] 轮播图展览
 - [x] 后台管理
 - [ ] 支付功能
+
+### 页面展示
+
+![xiaochengxu1](pages/1.jpg)
+
+![xiaochengxu2](pages/2.jpg)
+
+![xiaochengxu3](pages/4.jpg)
+
+![xiaochengxu4](pages/5.jpg)
+
+![xiaochengxu5](pages/6.jpg)
+
+![houtai1](pages/7.jpg)
