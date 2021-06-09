@@ -56,6 +56,6 @@ public class LoginAdminController {
         }
         map.put("msg", ResultEnum.LOGOUT_SUCCESS.getMessage());
         map.put("url", "/diancan/adimOrder/list");
-        return "zujian/success";
+        return "component/success";
     }
 }

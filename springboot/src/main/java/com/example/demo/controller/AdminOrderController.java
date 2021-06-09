@@ -49,7 +49,7 @@ public class AdminOrderController {
                          ModelMap map) {
         wxOrder.remove(orderId);
         map.put("url", "/diancan/adimOrder/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //取消订单
@@ -62,12 +62,12 @@ public class AdminOrderController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/adimOrder/list");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("msg", ResultEnum.ORDER_CANCEL_SUCCESS.getMessage());
         map.put("url", "/diancan/adimOrder/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //订单详情
@@ -80,7 +80,7 @@ public class AdminOrderController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/adimOrder/list");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("orderDTO", orderDTO);
@@ -97,12 +97,12 @@ public class AdminOrderController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/adimOrder/list");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("msg", ResultEnum.ORDER_FINISH_SUCCESS.getMessage());
         map.put("url", "/diancan/adimOrder/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //导出菜品订单到excel
@@ -114,10 +114,10 @@ public class AdminOrderController {
             e.printStackTrace();
             map.put("msg", "导出excel失败");
             map.put("url", "/diancan/adimOrder/list");
-            return "zujian/error";
+            return "component/error";
         }
         map.put("url", "/diancan/adimOrder/list");
-        return "zujian/success";
+        return "component/success";
     }
 
 }

@@ -52,7 +52,7 @@ public class AdminPictureController {
                          ModelMap map) {
         repository.deleteById(picId);
         map.put("url", "/diancan/picture/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //保存/更新
@@ -64,7 +64,7 @@ public class AdminPictureController {
         if (bindingResult.hasErrors()) {
             map.put("msg", bindingResult.getFieldError().getDefaultMessage());
             map.put("url", "/diancan/picture/index");
-            return "zujian/error";
+            return "component/error";
         }
         PictureInfo picture = new PictureInfo();
         try {
@@ -76,11 +76,11 @@ public class AdminPictureController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/picture/index");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("url", "/diancan/picture/list");
-        return "zujian/success";
+        return "component/success";
     }
 
 

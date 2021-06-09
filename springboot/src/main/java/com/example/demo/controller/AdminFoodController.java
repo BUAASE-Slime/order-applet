@@ -59,7 +59,7 @@ public class AdminFoodController {
                          ModelMap map) {
         foodRepository.deleteById(foodId);
         map.put("url", "/diancan/food/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //菜品详情页
@@ -93,11 +93,11 @@ public class AdminFoodController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/food/list");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("url", "/diancan/food/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //菜品下架
@@ -117,11 +117,11 @@ public class AdminFoodController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/food/list");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("url", "/diancan/food/list");
-        return "zujian/success";
+        return "component/success";
     }
 
 
@@ -133,7 +133,7 @@ public class AdminFoodController {
         if (bindingResult.hasErrors()) {
             map.put("msg", bindingResult.getFieldError().getDefaultMessage());
             map.put("url", "/diancan/food/index");
-            return "zujian/error";
+            return "component/error";
         }
 
         Food productInfo = new Food();
@@ -148,11 +148,11 @@ public class AdminFoodController {
             log.error("添加菜品错误={}", e);
             map.put("msg", "添加菜品出错");
             map.put("url", "/diancan/food/index");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("url", "/diancan/food/list");
-        return "zujian/success";
+        return "component/success";
     }
 
 
@@ -165,7 +165,7 @@ public class AdminFoodController {
         if (foodList == null || foodList.size() < 1) {
             map.put("msg", "菜品为空");
             map.put("url", "/diancan/food/list");
-            return "zujian/error";
+            return "component/error";
         }
         int size = foodList.size();
         String[][] dataList = new String[size][titles.length];
@@ -185,10 +185,10 @@ public class AdminFoodController {
             e.printStackTrace();
             map.put("msg", "导出excel失败");
             map.put("url", "/diancan/food/list");
-            return "zujian/error";
+            return "component/error";
         }
         map.put("url", "/diancan/food/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //excel导入网页
@@ -207,7 +207,7 @@ public class AdminFoodController {
         if (name.length() < 6 || !name.substring(name.length() - 5).equals(".xlsx")) {
             map.put("msg", "文件格式错误");
             map.put("url", "/diancan/food/excel");
-            return "zujian/error";
+            return "component/error";
         }
         List<Food> list;
         try {
@@ -216,7 +216,7 @@ public class AdminFoodController {
             if (list == null || list.size() <= 0) {
                 map.put("msg", "导入失败");
                 map.put("url", "/diancan/food/excel");
-                return "zujian/error";
+                return "component/error";
             }
             //excel的数据保存到数据库
             try {
@@ -233,10 +233,10 @@ public class AdminFoodController {
             e.printStackTrace();
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/food/excel");
-            return "zujian/error";
+            return "component/error";
         }
         map.put("url", "/diancan/food/list");
-        return "zujian/success";
+        return "component/success";
     }
 
 

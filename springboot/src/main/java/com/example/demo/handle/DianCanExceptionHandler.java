@@ -12,6 +12,6 @@ public class DianCanExceptionHandler {
     //http://localhost:8080/diancan/leimu/list
     @ExceptionHandler(value = DianCanAuthorizeException.class)
     public String handlerAuthorizeException() {
-        return "zujian/loginView";
+        return "component/loginView";
     }
 }

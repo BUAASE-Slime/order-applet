@@ -72,7 +72,7 @@ public class AdminController {
         if (bindingResult.hasErrors()) {
             map.put("msg", bindingResult.getFieldError().getDefaultMessage());
             map.put("url", "/diancan/admin/index");
-            return "zujian/error";
+            return "component/error";
         }
         AdminInfo admin = new AdminInfo();
         try {
@@ -84,10 +84,10 @@ public class AdminController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/admin/index");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("url", "/diancan/admin/list");
-        return "zujian/success";
+        return "component/success";
     }
 }

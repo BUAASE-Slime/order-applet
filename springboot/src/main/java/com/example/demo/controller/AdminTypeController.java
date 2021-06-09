@@ -59,7 +59,7 @@ public class AdminTypeController {
                          ModelMap map) {
         repository.deleteById(leimuId);
         map.put("url", "/diancan/leimu/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     //添加/更新
@@ -70,7 +70,7 @@ public class AdminTypeController {
         if (bindingResult.hasErrors()) {
             map.put("msg", bindingResult.getFieldError().getDefaultMessage());
             map.put("url", "/diancan/leimu/detail");
-            return "zujian/error";
+            return "component/error";
         }
 
         Type leimu = new Type();
@@ -84,11 +84,11 @@ public class AdminTypeController {
         } catch (DianCanException e) {
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/leimu/detail");
-            return "zujian/error";
+            return "component/error";
         }
 
         map.put("url", "/diancan/leimu/list");
-        return "zujian/success";
+        return "component/success";
     }
 
     /*
@@ -109,7 +109,7 @@ public class AdminTypeController {
         if (name.length() < 6 || !name.substring(name.length() - 5).equals(".xlsx")) {
             map.put("msg", "文件格式错误");
             map.put("url", "/diancan/leimu/excel");
-            return "zujian/error";
+            return "component/error";
         }
         List<Type> list;
         try {
@@ -118,7 +118,7 @@ public class AdminTypeController {
             if (list == null || list.size() <= 0) {
                 map.put("msg", "导入失败");
                 map.put("url", "/diancan/leimu/excel");
-                return "zujian/error";
+                return "component/error";
             }
             //excel的数据保存到数据库
             try {
@@ -141,9 +141,9 @@ public class AdminTypeController {
             e.printStackTrace();
             map.put("msg", e.getMessage());
             map.put("url", "/diancan/leimu/excel");
-            return "zujian/error";
+            return "component/error";
         }
         map.put("url", "/diancan/leimu/list");
-        return "zujian/success";
+        return "component/success";
     }
 }
