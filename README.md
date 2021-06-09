@@ -69,6 +69,10 @@ spring: # 注意此处数据库设置可能需要根据情况进行修改
     password: password
 ```
 
+### 关于部署
+
+> 这部分还没实践,实操之后再来补充
+
 ### 页面展示
 
 ![xiaochengxu1](pages/1.jpg)
