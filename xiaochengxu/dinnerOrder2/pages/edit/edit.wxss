@@ -1,0 +1,48 @@
+page {
+ background:rgb(244,244,244);
+}
+
+.nametext{
+  display:flex;
+
+}
+.container {
+ width: 80%;
+margin-left:5%;
+ background: white;
+ border-radius: 20px;
+ margin-top:20px;
+ padding:20px;
+ padding-right:5%;
+}
+
+.item_root {
+ background:#ffffff;
+ padding: 8px 10px;
+ flex-direction: column;
+ display: flex;
+ font-size:15px;
+}
+
+
+.textarea25px {
+ width: 90%;
+ height: 35px;
+ border: 1rpx solid gainsboro;
+ border-radius: 10px;
+ font-size:15px;
+
+ color:rgb(121,0,121);
+  padding-left:10px;
+}
+
+.btn_fabu {
+ width: 60%;
+ height: 40px;
+ margin-top: 20px;
+ align-items: center;
+ border-radius: 10px;
+ background-color: rgb(121,0,121);
+ color:white;
+}
+

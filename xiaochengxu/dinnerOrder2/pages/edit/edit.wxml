@@ -1,0 +1,17 @@
+<view class="container">
+ <view class='my_info' />
+ <view class='item_root'>
+  <view class="nametext">  姓名：</view> 
+  <input class="textarea25px" bindinput="bindinputusername" value="{{username}}" maxlength='10' />
+ </view>
+ <view class='item_root'>
+   电话：
+  <input class="textarea25px" bindinput="bindinputphone" value="{{phone}}" maxlength='11' />
+ </view>
+ <view class='item_root'>
+   <!-- 提交按钮 -->
+<button class='btn_fabu' bindtap='formSubmit' >修改</button>
+ </view>
+ </view>
+ 
+

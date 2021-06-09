@@ -75,7 +75,7 @@ Page({
   btnclick4: function() {
     console.log("跳转到后台小程序啦！")
     wx.navigateTo({
-      url: '',
+      url: '/pages/paihao/paihao',
     })
   } 
   ,
