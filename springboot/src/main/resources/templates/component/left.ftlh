@@ -14,7 +14,7 @@
         font-size: 1.2em;
         display: block;
         padding: 1em 15%;
-        border-bottom: 1px solid #6E8B3D;
+        border-bottom: 1px solid #4ca5b3;
         transition: all 0.2s ease-out;
         cursor: pointer;
     }
@@ -25,13 +25,13 @@
         left: 0;
         width: 180px;
         height: 100%;
-        background-color: #70C570;
+        background-color: #8edae0;
         z-index: 9999;
         transition: all 0.3s ease-in;
     }
 
     .mobile-nav ul li a:hover {
-        background-color: #17A2B8;
+        background-color: #0aa2f1;
         color: #ffffff;
     }
 
@@ -45,7 +45,6 @@
         <li><a href="/diancan/leimu/list">菜品类目管理</a></li>
         <li><a href="/diancan/food/list">菜品管理</a></li>
         <li><a href="/diancan/adimOrder/list">菜品订单</a></li>
-        <li><a href="/diancan/adminPaihao/list">排号管理</a></li>
         <li><a href="/diancan/logoutAdmin">退出登陆</a></li>
     </ul>
 </div>
