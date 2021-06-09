@@ -61,14 +61,14 @@ Page({
     wx.setStorageSync("tableNum", tableNum)
     //把菜品搜索词条保存起来
     wx.navigateTo({
-      url: ''
+      url: '../Food/food'
     })
   },
 
   //菜品浏览
   btnclick2: function() {
     wx.navigateTo({
-      url: ''
+      url: '../Food/food'
     })
   },
 

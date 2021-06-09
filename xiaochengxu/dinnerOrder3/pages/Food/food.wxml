@@ -1,0 +1,88 @@
+<!--logs.wxml-->
+<view class="page">
+  <!-- 顶部店家logo -->
+  <view class="weui-panel__bd posi_fiexd">
+    <navigator url="" class="weui-media-box weui-media-box_appmsg new_padd  bc_green" hover-class="none">
+      <!-- <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" style="width:120rpx;height:120rpx">
+        <image class="weui-media-box__thumb bd_radius" src="http://filet6.huitu.com/res/20180316/624922_20180316141534369413_3.jpg" />
+      </view> -->
+  
+      <view class="searchRoot">
+    <input class="searchInput" bindinput="getSearchKey" placeholder="搜索菜品"></input>
+    <image class="searchImg" bindtap="goSearch" src="../../image/search.png"></image>
+    </view>
+    </navigator>
+  </view>
+  
+  <!--tab  -->
+  <view class="weui-tab">
+
+    <view class="weui-navbar tab_style" style="position:fixed;">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item padd {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          
+        </view>
+      </block>
+      <view class="weui-navbar__slider slider_width" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+
+    <view>
+      
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <!--左侧栏  -->
+        <scroll-view scroll-y class="left-cont">
+          <block class="caixi" wx:key="id" wx:for="{{menu_list}}">
+            <view class="classify  {{curNav == item.id ? 'active' : ''}}" bindtap="changeRightMenu" data-id="{{item.id}}">{{item.name}}</view>
+          </block>
+           <!-- 分割线 -->
+           <view class="divLine"></view>
+        </scroll-view>
+        <!--右侧栏  -->
+        <scroll-view scroll-y class="right-cont">
+          <block wx:for="{{foodList}}" wx:key="">
+            <view class="weui-panel__bd mb_bottom">
+              <view class=" weui-media-box_appmsg bc_white mT" hover-class="none">
+                <view class="weui-media-box__hd  img_box ">
+                  <image class="weui-media-box__thumb img_box" src="{{item.icon}}" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="cai_title" data-index="{{index}}">{{item.name}}</view>
+                  <view class="cai_desc" wx:if="{{item.desc == ''}}">尚无介绍</view>
+                  <view class="cai_desc" wx:else>{{item.desc}}</view>
+                  <view class="cai_desc"> 余量：{{item.stock}} </view>
+                  <view class="price-stepper">
+                    <view class="cai_price" data-index="{{index}}">{{item.price}}</view>
+                    <view class="stepper">
+                      <!-- 减号 -->
+                      <view class="iconfont icon-minus2 fontP" hidden="{{item.quantity<=0}}" bindtap="minusCount" data-id="{{item.id}}" data-index="{{index}}">
+                    </view>
+                    <!-- hidden类似于v-if要是quantity<=0不显示 -->
+                      <!-- 数量 -->
+                      <view class="value" hidden="{{item.quantity<=0}}" data-id="{{item.id}}" data-num="{{item.quantity}}">{{item.quantity}}</view>
+                      <!-- 加号 -->
+                      <view class="iconfont icon-plus1 fontP" data-id="{{item.id}}" data-index="{{index}}" bindtap="addCount"></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+              <!-- 分割线 -->
+            <view class="divLine"></view>
+          </block>
+        </scroll-view>
+        <!--底部  -->
+        <view class="bottom_box">
+          <view class="shop_cartBox" >
+            <image class="shopCart_img" src="../../image/hanbaoa.png"></image>
+          </view>
+          <view class="all_money">总计：{{totalPrice}}元，{{totalNum}}件</view>
+          <view class="choose_ok  bc_green" bindtap="gotoOrder">去支付</view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+ 
+
+
+</view>

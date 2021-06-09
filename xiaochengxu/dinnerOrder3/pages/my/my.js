@@ -26,7 +26,7 @@ Page({
 
   goToMyOrder: function () {
     wx.navigateTo({
-      url: '',
+      url: '../myOrder/myOrder',
     })
   },
 
