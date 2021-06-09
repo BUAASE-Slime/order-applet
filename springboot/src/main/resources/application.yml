@@ -2,12 +2,12 @@ server:
   port: 8080
   servlet:
     context-path: /diancan
-spring:
+spring: # 注意此处数据库设置可能需要根据情况进行修改
   datasource:
-    url: jdbc:mysql://159.75.136.86/oms?characterEncoding=utf-8&useSSL=false&serverTimeZone=UTC
+    url: jdbc:mysql://localhost:3306/oms?characterEncoding=utf-8&useSSL=false&serverTimeZone=UTC
       &useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true
     username: root
-    password: db123456
+    password: password
     hikari:
       connection-init-sql: set names utf8mb4
     tomcat:

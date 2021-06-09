@@ -8,7 +8,7 @@ public interface GlobalConst {
     /*
     * 小程序相关
     * */
-    String APPID="wx68423570aefa48df";
-    String APPSECRET = "e978f2db3139b05937bdead99984b3f1";//小程序的appsecret，记得换成你自己的
+    String APPID="wx111111111111111";   //小程序的appID
+    String APPSECRET = "111112db3139b05937bdea1111113f1";//小程序的appsecret，记得换成你自己的，这个是虚拟的（瞎编的）
 
 }

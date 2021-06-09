@@ -5,12 +5,12 @@ App({
     userInfo: {},
     openid: null,
     // baseUrl: 'http://localhost:8080/diancan' //本地调试
-    baseUrl: 'http://219.224.168.57:8080/diancan' //真机调试,这里的ip地址一定是你电脑的ip
+    baseUrl: 'http://111.111.11.11:8080/diancan' //真机调试,这里的ip地址需要修改为你服务器的IP
   },
   onLaunch: function () {
     //云开发初始化
     wx.cloud.init({
-      env: 'cloud1-5g2wet2xb0734ff5', //我的云开发环境id！！！
+      env: 'cloud1-11111e2xb0734ff5', //我的云开发环境id！！！
       traceUser: true,
     })
     this.getOpenid();

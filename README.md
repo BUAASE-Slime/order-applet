@@ -24,6 +24,51 @@
 - [x] 后台管理
 - [ ] 支付功能
 
+### 如何使用
+
+需要根据情况修改下列配置：
+
+- xiaochengxu\app.js
+
+```js
+globalData: {
+    userInfo: {},
+    openid: null,
+    // baseUrl: 'http://localhost:8080/diancan'     //本地调试
+    baseUrl: 'http://111.111.111.11:8080/diancan'   //真机调试,这里的ip地址需要修改为你服务器的IP
+  },
+  onLaunch: function () {
+    wx.cloud.init({
+      env: 'cloud2-5111111111111ff5',   //修改为你的云开发环境ID
+      traceUser: true,
+    })
+    this.getOpenid();
+  },
+```
+
+- springboot\src\main\java\com\example\demo\global\GlobalConst.java
+
+```java
+public interface GlobalConst {
+    String COOKIE_TOKEN = "huangzehuan";    //用来管理Cookie的key
+
+    String APPID="wx111111111111111";       //小程序的appID
+    String APPSECRET = "111112db3139b05937bdea1111113f1";   //小程序的appsecret，记得换成你自己的
+
+}
+```
+
+- springboot\src\main\resources\application.yml
+
+```yml
+spring: # 注意此处数据库设置可能需要根据情况进行修改
+  datasource:
+    url: jdbc:mysql://localhost:3306/oms?characterEncoding=utf-8&useSSL=false&serverTimeZone=UTC
+      &useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true
+    username: root
+    password: password
+```
+
 ### 页面展示
 
 ![xiaochengxu1](pages/1.jpg)
