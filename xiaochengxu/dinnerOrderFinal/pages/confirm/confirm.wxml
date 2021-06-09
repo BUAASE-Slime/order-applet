@@ -1,15 +1,4 @@
-<!--头部  -->
 <view class="page cont_box">
-  <!-- <view class="weui-panel__bd posi_fiexd">
-    <navigator url="" class="weui-media-box weui-media-box_appmsg new_padd  bc_green" hover-class="weui-cell_active">
-      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-        <image class="weui-media-box__thumb bd_radius" src="https://dpic.tiankong.com/tp/it/QJ7111158391.jpg" />
-      </view>
-      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-        <view class="weui-media-box__title  color_white">好味</view>  
-      </view>
-    </navigator>
-  </view> -->
   <!--内容  -->
   <view class="conctent">
     <view class="weui-panel__hd weui_titleBox">{{tableNum}}</view>

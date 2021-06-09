@@ -9,7 +9,6 @@
   <input class="textarea25px" bindinput="bindinputphone" value="{{phone}}" maxlength='11' />
  </view>
  <view class='item_root'>
-   <!-- 提交按钮 -->
 <button class='btn_fabu' bindtap='formSubmit' >修改</button>
  </view>
  </view>

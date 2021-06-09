@@ -1,15 +1,6 @@
 @import '../../wxss/weui.wxss';
 @import '../../wxss/common.wxss';
-/**app.wxss**/
-/*隐藏滚动条  */
-
-/* ::-webkit-scrollbar{
-  width: 0;
-  height: 0;
-  color: transparent;
-} */
-
-
+/* yinrutubiao引入图标 */
 .container {
   background-color:black;
   height: 100%;

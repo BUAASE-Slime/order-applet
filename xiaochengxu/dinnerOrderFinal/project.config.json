@@ -43,7 +43,7 @@
   "libVersion": "2.10.3",
   "cloudfunctionRoot": "functions/",
   "appid": "wx68423570aefa48df",
-  "projectname": "dinnerOrder4",
+  "projectname": "DinnerOrderFinal",
   "debugOptions": {
     "hidedInDevtools": []
   },
