@@ -2,6 +2,7 @@
 //     confirmOrder: [],
 //     diner_num: 0,
 //     diner_numF: false,
+let app = getApp();
 let payWay = [{
   "id": 1,
   "package": ""

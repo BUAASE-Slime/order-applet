@@ -55,6 +55,7 @@ Page({
   },
 //以下是一个很大的函数，几乎囊括所有，注意缩进调整
   onLoad: function(options) {
+    
     tableNum = wx.getStorageSync("tableNum")
     searchKey = options.searchKey;
     if (!searchKey) {
