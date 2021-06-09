@@ -1,13 +1,12 @@
-//JS
 var app = getApp()
-let orderStatus = 1; //0"新订单，未支付;1"新订单，已支付";2, "已取消"；3"待评价"；4“已完成”
+let orderStatus = 1; //0"新订单，未支付;1"新订单，已支付";4“已完成”
 Page({
   data: {
     // 顶部菜单切换
     navbar: ["待上餐",  "已完成"],
     // 默认选中菜单
     currentTab: 0,
-    isShowComment: false, //是否显示评论框
+    isShowComment: false, 
     list: []
   },
   //顶部tab切换

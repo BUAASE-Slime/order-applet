@@ -54,14 +54,14 @@ Page({
 
     if (username == '' || username == undefined) {
       wx.showToast({
-        title: '用户名不能为空',
+        title: '用户名不可为空',
         icon: 'none'
       })
       return;
     }
     if (phone == '' || phone == undefined) {
       wx.showToast({
-        title: '手机号不能为空',
+        title: '手机号不可为空',
         icon: 'none'
       })
       return;
@@ -92,7 +92,7 @@ Page({
         // })
       },
       fail(res) {
-        console.log("提交失败", res)
+        console.log("修改失败", res)
       }
     })
 
