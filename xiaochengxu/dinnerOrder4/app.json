@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/edit/edit",
+    "pages/confirm/confirm",
     "pages/my/my",
     "pages/Food/food",
     "pages/test"

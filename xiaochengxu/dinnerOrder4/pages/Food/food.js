@@ -2,7 +2,6 @@ let app = getApp();
 var max_row_height = 5;
 var food_row_height = 50;
 var cart_offset = 90;
-
 let categories = []
 let tableNum = null;
 let searchKey = null;
@@ -16,13 +15,15 @@ Page({
     sliderWidth: 0.5,
     // 左右两侧菜单的初始显示次序
     curNav: 0,
+    // 右菜单
     menu_list: [],
-    foodList: [], 
+    // 左菜单
+    foodList: [], //展示菜品
+    // 购物车
     cartList: [],
     hasList: false, // 列表是否有数据
-    totalPrice: 0, // 总价，初始为0
-    totalNum: 0, //总数，初始为0
-
+    totalPrice: 0, // 总价
+    totalNum: 0, //总数
 
   },
   
@@ -31,7 +32,11 @@ Page({
     console.log("搜索词", event.detail.value)
     searchKey = event.detail.value
   },
-
+  goSearch() { //去搜索页
+    wx.navigateTo({
+      url: '../buy/buy?searchKey=' + searchKey
+    })
+  },
 
   onLoad: function(options) {
     tableNum = wx.getStorageSync("tableNum")
@@ -39,16 +44,12 @@ Page({
     if (!searchKey) {
       searchKey = 'all'
     }
-    console.log("传入的桌号", tableNum)
-    console.log("传入的搜索词", searchKey)
+    console.log("传入桌号", tableNum)
+    console.log("传入搜索词", searchKey)
     var that = this
-    // 获取购物车缓存数据
     var arr = wx.getStorageSync('cart') || [];
-    // 左分类菜单
     var menu_list = this.data.menu_list;
-    // 右菜品菜单
     var foodList = this.data.foodList;
-    // 获取左侧分类菜单数据
     categories = []
     // 获取右侧菜品列表数据
     var resFood = []
@@ -87,6 +88,7 @@ Page({
       }
     });
 
+    // 购物车总量、总价
     var totalPrice = this.data.totalPrice
     var totalNum = this.data.totalNum
     console.log("存储购物车", arr)
@@ -105,6 +107,8 @@ Page({
         totalNum += Number(arr[i].quantity);
       }
     }
+
+    // 赋值数据
     this.setData({
       hasList: true,
       cartList: arr,
@@ -117,9 +121,8 @@ Page({
       success: function(res) {
         that.setData({
           sliderLeft: (res.windowWidth / that.data.tabs.length - res.windowWidth / 2) / 2,
-          
           sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex,
-           });//获得使用手机的尺寸信息
+        });//获得使用手机的尺寸信息
       }
     });
   },
@@ -144,7 +147,7 @@ Page({
     if (!tableNum) {
       wx.showModal({
         title: '提示',
-        content: '请到首页扫码识别桌号后再点餐',
+        content: '请到首页扫码识别桌号然后再来点餐',
         showCancel: false, //去掉取消按钮
         success: function(res) {
           if (res.confirm) {
@@ -165,7 +168,6 @@ Page({
     var f = false;
     for (var i in this.data.foodList) { // 遍历菜单找到被点击的菜品，数量加1
       if (this.data.foodList[i].id == id) {
-
         this.data.foodList[i].quantity += 1;
         if (arr.length > 0) {
           for (var j in arr) { // 遍历购物车找到被点击的菜品，数量加1
@@ -174,18 +176,17 @@ Page({
               f = true;
               try {
                 wx.setStorageSync('cart', arr)
-              } 
-              catch (e) {
+              } catch (e) {
                 console.log(e)
               }
               break;
             }
           }
-        if (!f) {
+          if (!f) {
             arr.push(this.data.foodList[i]);
           }
         } else {
-            arr.push(this.data.foodList[i]);
+          arr.push(this.data.foodList[i]);
         }
         try {
           wx.setStorageSync('cart', arr)
@@ -211,7 +212,7 @@ Page({
       }
     }
   },
-
+  // 减少点菜数量
   minusCount: function(e) {
     var id = e.currentTarget.dataset.id;
     var arr = wx.getStorageSync('cart') || [];
@@ -256,14 +257,14 @@ Page({
   },
   // 获取购物车总价、总数
   getTotalPrice: function() {
-    var cartList = this.data.cartList; 
+    var cartList = this.data.cartList; // 获取购物车列表
     var totalP = 0;
     var totalN = 0
-    for (var i in cartList) { 
-      totalP += cartList[i].quantity * cartList[i].price;    
+    for (var i in cartList) { // 循环列表得到每个数据
+      totalP += cartList[i].quantity * cartList[i].price; // 所有价格加起来     
       totalN += cartList[i].quantity
     }
-    this.setData({ 
+    this.setData({ // 最后赋值到data中渲染到页面
       cartList: cartList,
       totalNum: totalN,
       totalPrice: totalP.toFixed(2)
