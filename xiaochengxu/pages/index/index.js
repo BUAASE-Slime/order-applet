@@ -67,11 +67,7 @@ Page({
   btnclick4: function() {
     console.log("跳转到后台小程序啦！")
     wx.navigateTo({
-<<<<<<< HEAD
       url: '/pages/adminLogin/adminLogin',
-=======
-      url: '',
->>>>>>> origin/hzh
     })
   } 
   ,
