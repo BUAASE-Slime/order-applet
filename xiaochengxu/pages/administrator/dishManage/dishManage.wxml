@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells__title">菜品列表
+      <view class="back" bindtap="back">返回</view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <block wx:for="{{foodList}}" wx:key="key">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="changeMessage" data-food="{{item}}">
+          <image src="{{item.foodIcon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;" />
+          <view class="weui-cell__bd" style="font-size: 14px">{{item.foodName}}：{{item.foodPrice}}元</view>
+          <!-- 自定义的参数命名需小写,有bug -->
+          <button type="primary" class="controlButton" wx:if="{{item.foodStatus}}" catchtap="onSale" data-id="{{item.foodId}}" style="background-color: orange">已下架</button>
+          <button type="primary" class="controlButton" wx:else catchtap="offSale" data-id="{{item.foodId}}">上架中</button>
+          <button type="warn" style="font-size: 10px" catchtap="removeFood" data-id="{{item.foodId}}">删除</button>
+          <!-- image src="../../../image/cha.png" class="deleteImg" catchtap="removeFood" data-id="{{item.foodId}}" /-->
+        </view>
+      </block>
+    </view>
+  </view>
+  <image class="addFood"  src="../../../image/add.png" catchtap="addFood"/>
+</view>

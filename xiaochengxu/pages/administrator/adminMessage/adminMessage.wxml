@@ -1,0 +1,35 @@
+<view class="form">
+  <view class="page-section">
+    <view class="page-section-title">名字：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入名称" value="{{username}}" bindinput="inputName"/>
+      </view>
+    </view>
+    <view class="page-section-title">手机号/微信：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入手机号/微信" value="{{phone}}" bindinput="inputPhone"/>
+      </view>
+    </view>
+    <view class="page-section-title">密码：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="password" placeholder="输入密码" value="{{password}}" bindinput="inputPassword"/>
+      </view>
+    </view>
+    
+    <view class="page-section-title">管理员权限：</view>
+    <view class="select_box">
+      <view class="select" catchtap="selectTap">
+        <text class="select_text">{{selectData[index]}}</text>
+        <image class='select_img {{show&&"select_img_rotate"}}' src='../../../image/down.png'></image>
+      </view>
+      <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+      </view>
+    </view>  
+  
+  </view>
+  <button class="submit" bindtap="submit">提交</button>
+</view>

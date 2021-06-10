@@ -1,0 +1,69 @@
+/* pages/adminMessage/adminMessage.wxss */
+@import '../../../wxss/weui.wxss';
+@import '../../../wxss/common.wxss';
+.page-section-title {
+  margin-left: 5%;
+  margin-top: 5%
+}
+.inputborder {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: rgb(236, 234, 234);
+}
+.select_box {
+  background: #fff;
+  width: 90%;
+  margin: 30rpx auto;
+  position: relative;
+}
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80rpx;
+  border:3px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.select_text {
+  font-size: 35rpx;
+  flex: 1;
+}
+.select_img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_img_rotate {
+  transform:rotate(180deg); 
+}
+.option_box{
+  position: absolute;
+  top: 73rpx;
+  width: 100%;
+  border: 3px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+}
+.option{
+  margin-top: 10rpx;
+  display: block;
+  line-height: 40rpx;
+  font-size: 35rpx;
+  border-bottom: 2px solid #efefef;
+  padding: 20rpx;
+}
+.submit {
+  width: 40%;
+  font-size: 14px;
+  margin-top: 70px;
+  margin-left: 30%;
+}

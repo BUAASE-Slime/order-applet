@@ -6,7 +6,17 @@
     "pages/myOrder/myOrder",
     "pages/my/my",
     "pages/Food/food",
-    "pages/test"
+    "pages/test",
+    "pages/administrator/administrator",
+    "pages/administrator/dishManage/dishManage",
+    "pages/administrator/adminMessage/adminMessage",
+    "pages/administrator/foodMessage/foodMessage",
+    "pages/administrator/dishClassify/dishClassify",
+    "pages/administrator/leimuMessage/leimuMessage",
+    "pages/administrator/adminManage/adminManage",
+    "pages/administrator/pictureManage/pictureManage",
+    "pages/administrator/pictureMessage/pictureMessage",
+    "pages/adminLogin/adminLogin"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,7 +35,6 @@
         "pagePath": "pages/index/index",
         "text": "首页"
       },
-
       {
         "selectedIconPath": "image/my.png",
         "iconPath": "image/mya.png",

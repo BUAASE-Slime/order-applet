@@ -1,0 +1,17 @@
+<view class="form">
+  <view class="page-section">
+    <view class="page-section-title">用户名：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入用户名" value="{{username}}" bindinput="inputName"/>
+      </view>
+    </view>
+    <view class="page-section-title">密码：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="password" placeholder="输入密码" value="{{password}}" bindinput="inputPassword"/>
+      </view>
+    </view>
+  </view>
+  <button class="login" bindtap="login">登录</button>
+</view>

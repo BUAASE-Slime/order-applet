@@ -1,0 +1,18 @@
+/* pages/administrator/pictureManage/pictureManage.wxss */
+@import '../../../wxss/weui.wxss';
+@import '../../../wxss/common.wxss';
+.addPicture {
+  position: fixed;
+  left: 7%;
+  top: 90%;
+  width: 40px;
+  height: 40px;
+}
+.back {
+  float: right;
+}
+.deleteImg {
+  width: 18px;
+  height: 14px;
+  float: left
+}

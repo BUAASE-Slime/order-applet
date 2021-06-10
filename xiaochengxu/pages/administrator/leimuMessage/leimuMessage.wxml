@@ -1,0 +1,17 @@
+<view class="form">
+  <view class="page-section">
+    <view class="page-section-title">类目名称：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入名称" value="{{leimuName}}" bindinput="inputName"/>
+      </view>
+    </view>
+    <view class="page-section-title">类目编号：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入编号" value="{{leimuType}}" bindinput="inputType"/>
+      </view>
+    </view>
+  </view>
+  <button class="submit" bindtap="submit">提交</button>
+</view>

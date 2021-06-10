@@ -1,0 +1,18 @@
+<view class="form">
+  <view class="page-section">
+    <view class="page-section-title">图片Url：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入Url" value="{{picUrl}}" bindinput="inputUrl"/>
+      </view>
+    </view>
+    <view class="page-section-title">图片描述：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入描述" value="{{picMessage}}" bindinput="inputMessage"/>
+      </view>
+    </view>
+  </view>
+  <button class="submit" bindtap="submit">提交</button>
+</view>
+

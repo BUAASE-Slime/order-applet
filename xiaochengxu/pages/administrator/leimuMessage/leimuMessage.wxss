@@ -1,0 +1,20 @@
+/* pages/administrator/leimuMessage/leimuMessage.wxss */
+@import '../../../wxss/weui.wxss';
+@import '../../../wxss/common.wxss';
+.page-section-title {
+  margin-left: 5%;
+  margin-top: 5%
+}
+.inputborder {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: rgb(236, 234, 234);
+}
+.submit {
+  width: 40%;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 30%;
+}

@@ -1,0 +1,31 @@
+/* pages/administrator/administrator.wxss */
+@import '../../wxss/weui.wxss';
+@import '../../wxss/common.wxss';
+.category-panel1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #666;
+}
+.category-panel2 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.category-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.category-item-image {
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  overflow: unset;
+}
+.category-item-text {
+  margin-top: 8px;
+  font-size: 11px;
+}

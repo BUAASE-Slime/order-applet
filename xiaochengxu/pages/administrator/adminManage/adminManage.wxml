@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells__title">管理员列表
+      <view class="back" bindtap="back">返回</view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <block wx:for="{{adminList}}" wx:key="key">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="changeMessage" data-admin="{{item}}">
+          <view class="weui-cell__bd" style="font-size: 14px">{{item.username}} {{item.phone}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
