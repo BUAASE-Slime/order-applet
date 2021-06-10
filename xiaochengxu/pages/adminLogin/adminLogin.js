@@ -1,6 +1,6 @@
 // pages/adminLogin/adminLogin.js
+let app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -17,7 +17,7 @@ Page({
   },
   login() {
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxlogin',
+      url: app.globalData.baseUrl + '/xcxlogin',
       method: "POST",
       /** 传多个值，需要改变请求头 */
       header: {

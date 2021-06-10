@@ -1,4 +1,5 @@
 // pages/dishManage/dishManage.js
+let app = getApp();
 Page({
 
   /**
@@ -16,7 +17,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxfood/list',
+      url: app.globalData.baseUrl + '/xcxfood/list',
       method: "GET",
       success(res) {
         console.log(res.data);

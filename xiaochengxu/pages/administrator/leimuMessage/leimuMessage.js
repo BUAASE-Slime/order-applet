@@ -1,4 +1,5 @@
 // pages/administrator/leimuMessage/leimuMessage.js
+let app = getApp();
 Page({
 
   /**
@@ -35,7 +36,7 @@ Page({
   },
   submit() {
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxleimu/save',
+      url: app.globalData.baseUrl + '/xcxleimu/save',
       method: "POST",
       data: {
         leimuId: this.data.leimuId,

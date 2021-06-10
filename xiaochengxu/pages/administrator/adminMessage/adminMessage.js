@@ -1,4 +1,5 @@
 // pages/adminMessage/adminMessage.js
+let app = getApp();
 Page({
 
   /**
@@ -59,7 +60,7 @@ Page({
   },
   submit() {
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxadmin/save',
+      url: app.globalData.baseUrl + '/xcxadmin/save',
       method: "POST",
       data: {
         username: this.data.username,

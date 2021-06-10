@@ -1,4 +1,5 @@
 // pages/administrator/pictureManage/pictureManage.js
+let app = getApp();
 Page({
 
   /**
@@ -15,7 +16,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxpicture/list',
+      url: app.globalData.baseUrl + '/xcxpicture/list',
       method: "GET",
       success(res) {
         console.log(res.data);
@@ -48,7 +49,7 @@ Page({
           //点击取消,默认隐藏弹框
         } else {
           wx.request({
-            url: 'http://localhost:8080/diancan/xcxpicture/remove',
+            url: app.globalData.baseUrl + '/xcxpicture/remove',
             method: "GET",
             data: {
               picId: picId

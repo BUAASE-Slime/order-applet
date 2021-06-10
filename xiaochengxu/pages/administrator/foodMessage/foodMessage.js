@@ -1,4 +1,5 @@
 // pages/administrator/addFood/addFood.js
+let app = getApp();
 Page({
 
   /**
@@ -67,7 +68,7 @@ Page({
   },
   submit() {
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxfood/save',
+      url: app.globalData.baseUrl + '/xcxfood/save',
       method: "POST",
       data: {
         foodId: this.data.foodId,

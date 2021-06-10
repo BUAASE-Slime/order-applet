@@ -1,4 +1,5 @@
 // pages/administrator/adminManage/adminManage.js
+let app = getApp();
 Page({
 
   /**
@@ -16,7 +17,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxadmin/list',
+      url: app.globalData.baseUrl + '/xcxadmin/list',
       method: "GET",
       success(res) {
         console.log(res.data);

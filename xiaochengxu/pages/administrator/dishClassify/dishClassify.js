@@ -1,4 +1,5 @@
 // pages/administrator/dishClassify/dishClassify.js
+let app = getApp();
 Page({
 
   /**
@@ -14,7 +15,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/diancan/xcxleimu/list',
+      url: app.globalData.baseUrl + '/xcxleimu/list',
       method: "GET",
       success(res) {
         console.log(res.data);
