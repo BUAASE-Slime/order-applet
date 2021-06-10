@@ -35,7 +35,7 @@ Page({
     var leimu = e.currentTarget.dataset.leimu;
     console.log(leimu);
     wx.setStorageSync("leimu", leimu)
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../leimuMessage/leimuMessage',
     })
   },
@@ -57,7 +57,7 @@ Page({
               leimuId: leimuId
             }
           })
-          wx.navigateTo({
+          wx.redirectTo({
             url: '../dishClassify/dishClassify',
           })
         }
@@ -66,12 +66,12 @@ Page({
   },
   addLeimu() {
     wx.clearStorage({})
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../leimuMessage/leimuMessage',
     })
   },
   back() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../../administrator/administrator',
     })
   },

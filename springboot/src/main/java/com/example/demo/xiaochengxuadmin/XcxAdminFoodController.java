@@ -18,7 +18,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -42,13 +41,13 @@ public class XcxAdminFoodController {
 
     @GetMapping("/remove")
     @ResponseBody
-    public void remove(@RequestBody Integer foodId) {
+    public void remove(Integer foodId) {
         foodRepository.deleteById(foodId);
     }
 
     @GetMapping("/on_sale")
     @ResponseBody
-    public void onSale(@RequestBody  Integer foodId) {
+    public void onSale(Integer foodId) {
         try {
             Food food = foodRepository.findById(foodId).orElse(null);
             if (food == null) {
@@ -66,7 +65,7 @@ public class XcxAdminFoodController {
 
     @GetMapping("/off_sale")
     @ResponseBody
-    public void offSale(@RequestBody Integer foodId) {
+    public void offSale(Integer foodId) {
         try {
             Food food = foodRepository.findById(foodId).orElse(null);
             if (food == null) {

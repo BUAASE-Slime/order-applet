@@ -20,7 +20,6 @@ Page({
       url: app.globalData.baseUrl + '/xcxfood/list',
       method: "GET",
       success(res) {
-        console.log(res.data);
         var foodList = that.data.foodList;
         for (var item in res.data) {
           if (res.data[item].foodId && res.data[item].foodName && res.data[item].foodPrice) {
@@ -38,13 +37,13 @@ Page({
     var food = e.currentTarget.dataset.food;
     console.log(food);
     wx.setStorageSync("food", food)
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../foodMessage/foodMessage'
     })
   },
   addFood() {
     wx.clearStorage({})
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../foodMessage/foodMessage'
     })
   },
@@ -66,7 +65,7 @@ Page({
               foodId: foodId
             }
           })
-          wx.navigateTo({
+          wx.redirectTo({
             url: '../dishManage/dishManage',
           })
         }
@@ -80,10 +79,12 @@ Page({
       method: "GET",
       data: {
         foodId: foodId
+      },
+      success(res) {
+        wx.redirectTo({
+          url: '../dishManage/dishManage',
+        })
       }
-    })
-    wx.navigateTo({
-      url: '../dishManage/dishManage'
     })
   },
   offSale(e) {
@@ -93,14 +94,16 @@ Page({
       method: "GET",
       data: {
         foodId: foodId
+      },
+      success(res) {
+        wx.redirectTo({
+          url: '../dishManage/dishManage',
+        })
       }
-    })
-    wx.navigateTo({
-      url: '../dishManage/dishManage'
     })
   },
   back() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../../administrator/administrator',
     })
   },

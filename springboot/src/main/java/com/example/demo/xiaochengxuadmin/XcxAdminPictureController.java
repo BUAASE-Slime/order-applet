@@ -31,7 +31,7 @@ public class XcxAdminPictureController {
 
     @GetMapping("/remove")
     @ResponseBody
-    public void remove(@RequestParam Integer picId) {
+    public void remove(Integer picId) {
         repository.deleteById(picId);
     }
 

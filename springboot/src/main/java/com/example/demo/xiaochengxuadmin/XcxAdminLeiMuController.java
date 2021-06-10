@@ -35,7 +35,7 @@ public class XcxAdminLeiMuController {
 
     @GetMapping("/remove")
     @ResponseBody
-    public void remove(@RequestBody Integer leimuId) {
+    public void remove(Integer leimuId) {
         repository.deleteById(leimuId);
     }
 

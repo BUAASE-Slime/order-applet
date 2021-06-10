@@ -33,7 +33,7 @@ Page({
     })
   },
   back() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../../administrator/administrator',
     })
   },
@@ -55,7 +55,7 @@ Page({
               picId: picId
             }
           })
-          wx.navigateTo({
+          wx.redirectTo({
             url: '../pictureManage/pictureManage',
           })
         }

@@ -34,7 +34,7 @@ Page({
     })
   },
   back() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../../administrator/administrator',
     })
   },

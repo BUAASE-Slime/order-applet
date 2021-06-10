@@ -74,6 +74,11 @@ Page({
       url: './dishClassify/dishClassify',
     })
   },
+  adminManage() {
+    wx.navigateTo({
+      url: './adminManage/adminManage',
+    })
+  },
   slideshowManage() {
     wx.navigateTo({
       url: './pictureManage/pictureManage',

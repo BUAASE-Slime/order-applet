@@ -19,7 +19,7 @@
 <view class="weui-cells__title">| 其他信息</view>
 <view class="category-panel1">
   <view class="category-panel2">
-    <view bindtap='adminMessage' class="category-item">
+    <view bindtap='adminManage' class="category-item">
       <image class="category-item-image" src="/image/staff.png" />
       <text class="category-item-text">管理人员</text>
     </view>
