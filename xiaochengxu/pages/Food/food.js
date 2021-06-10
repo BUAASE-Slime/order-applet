@@ -1,25 +1,34 @@
+// let app = getApp();
+// let payWay = [{
+//   "id": 1,
+//   "package": "会员卡支付"
+// }, {
+//   "id": 2,
+//   "package": "微信支付"
+// }, {
+//   "id": 3,
+//   "package": "银行卡支付"
+// }]
 let app = getApp();
-var max_row_height = 5;
-// 行高
-var food_row_height = 50;
-// 底部栏偏移量
-var cart_offset = 90;
-
-//所有商品列表
-let categories = []
-//桌号
 let tableNum = null;
-//搜索词
 let searchKey = null;
-
+var max_row_height = 5;
+var food_row_height = 50;
+var cart_offset = 100;
+let categories = []
 Page({
   data: {
+    // 购物车动画
+    animationData: {},
+    animationMask: {},
+    maskVisual: "hidden",
+    maskFlag: true,
+    
     tabs: [""],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
     sliderWidth: 0.5,
-    // 左右两侧菜单的初始显示次序
     curNav: 0,
     // 右菜单
     menu_list: [],
@@ -30,11 +39,7 @@ Page({
     hasList: false, // 列表是否有数据
     totalPrice: 0, // 总价，初始为0
     totalNum: 0, //总数，初始为0
-    // 购物车动画
-    animationData: {},
-    animationMask: {},
-    maskVisual: "hidden",
-    maskFlag: true,
+    
 
   },
   
@@ -45,20 +50,20 @@ Page({
   },
   goSearch() { //去搜索页
     wx.navigateTo({
-      url: '../buy/buy?searchKey=' + searchKey
+      url: '../Food/food?searchKey=' + searchKey
     })
   },
-
+//以下是一个很大的函数，几乎囊括所有，注意缩进调整
   onLoad: function(options) {
+    
     tableNum = wx.getStorageSync("tableNum")
     searchKey = options.searchKey;
     if (!searchKey) {
       searchKey = 'all'
     }
-    console.log("传入的桌号", tableNum)
-    console.log("传入的搜索词", searchKey)
+    console.log("桌号", tableNum)
+    console.log("搜索词", searchKey)
     var that = this
-    // 获取购物车缓存数据
     var arr = wx.getStorageSync('cart') || [];
     // 左分类菜单
     var menu_list = this.data.menu_list;
@@ -142,7 +147,6 @@ Page({
     });
   },
 
-
   // 点击切换右侧数据
   changeRightMenu: function(e) {
     var classify = e.target.dataset.id; // 获取点击事件所在项的id
@@ -162,7 +166,7 @@ Page({
     if (!tableNum) {
       wx.showModal({
         title: '提示',
-        content: '请到首页扫码识别桌号然后再来点餐',
+        content: '请先扫码获取桌号后再点餐',
         showCancel: false, //去掉取消按钮
         success: function(res) {
           if (res.confirm) {
@@ -218,7 +222,7 @@ Page({
     })
     this.getTotalPrice();
   },
-  // 定义根据id删除数组的方法
+  // 根据id删除数组
   removeByValue: function(array, val) {
     for (var i = 0; i < array.length; i++) {
       if (array[i].id == val) {
@@ -275,11 +279,11 @@ Page({
     var cartList = this.data.cartList; // 获取购物车列表
     var totalP = 0;
     var totalN = 0
-    for (var i in cartList) { // 循环列表得到每个数据
-      totalP += cartList[i].quantity * cartList[i].price; // 所有价格加起来     
+    for (var i in cartList) { // 循环列表得到数据
+      totalP += cartList[i].quantity * cartList[i].price; // 价格加起来总价     
       totalN += cartList[i].quantity
     }
-    this.setData({ // 最后赋值到data中渲染到页面
+    this.setData({ // 最后赋值到data中
       cartList: cartList,
       totalNum: totalN,
       totalPrice: totalP.toFixed(2)
@@ -295,7 +299,7 @@ Page({
     if (!tableNum) {
       wx.showModal({
         title: '提示',
-        content: '请到首页扫码点餐',
+        content: '请到首页扫码后再点餐',
         showCancel: false, //去掉取消按钮
         success: function(res) {
           if (res.confirm) {

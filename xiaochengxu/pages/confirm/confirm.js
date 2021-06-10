@@ -1,35 +1,38 @@
+// tableNum: "",
+//     confirmOrder: [],
+//     diner_num: 0,
+//     diner_numF: false,
 let app = getApp();
 let payWay = [{
   "id": 1,
-  "package": "会员卡支付"
+  "package": ""
 }, {
   "id": 2,
   "package": "微信支付"
 }, {
   "id": 3,
-  "package": "银行卡支付"
+  "package": ""
 }]
+// remarks: "",
+// payWayList: [],
+// cartList: [],
+// totalPrice: 0,
+// totalNum: 0,
+// maskFlag: true,let app = getApp();
 Page({
   //页面的初始数据
   data: {
     tableNum: "",
     confirmOrder: [],
-    // 输入框中的用餐人数
     diner_num: 0,
-    // 用餐人数输入框获取焦点
     diner_numF: false,
-    // 备注信息
     remarks: "",
-    //支付方式列表
     payWayList: [],
-    // 购物车数据
     cartList: [],
     totalPrice: 0,
     totalNum: 0,
-    // 遮罩
     maskFlag: true,
   },
-  // 生命周期函数--监听页面加载
   onLoad: function(Options) {
     var that = this;
     let tableNum = Options.tableNum;
@@ -82,7 +85,7 @@ Page({
         success: (res => {
           if (res.confirm) {
             wx.navigateTo({
-              url: '../change/change',
+              url: '../edit/edit',
             })
           }
         })
@@ -115,7 +118,6 @@ Page({
       })
     }
     var peoples = this.data.diner_num
-    console.log("用餐人数：" + peoples)
     console.log("备注：" + remarks)
     console.log("桌号" + tableNum)
 

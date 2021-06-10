@@ -12,9 +12,6 @@ Page({
   onShow() {
     searchKey = '' //每次返回首页时，清空搜索词
   },
-
-
-
   //扫码点餐
   btnclick1: function() {
     let that = this;
@@ -37,19 +34,14 @@ Page({
       success: (res) => {
         if (res.result) {
           let str = res.result;
-          //识别的二维码里1就代表1号桌，2就代表2号桌以此类推
           if (str.search("1") != -1) {
-            console.log("1号桌")
             that.goToBuy("1号桌")
           } else if (str.search("2") != -1) {
-            console.log("2号桌")
             that.goToBuy("2号桌")
           } else if (str.search("3") != -1) {
-            console.log("3号桌")
             that.goToBuy("3号桌")
-          } else if (str.search("4") != -1) {
-            console.log("4号桌")
-            that.goToBuy("4号桌")
+          } else {
+            console.log("桌号错误")
           }
         }
       }
@@ -75,7 +67,11 @@ Page({
   btnclick4: function() {
     console.log("跳转到后台小程序啦！")
     wx.navigateTo({
+<<<<<<< HEAD
       url: '/pages/adminLogin/adminLogin',
+=======
+      url: '',
+>>>>>>> origin/hzh
     })
   } 
   ,

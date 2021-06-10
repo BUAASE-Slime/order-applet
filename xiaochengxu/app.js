@@ -4,8 +4,8 @@ App({
   globalData: {
     userInfo: {},
     openid: null,
-    baseUrl: 'http://localhost:8080/diancan' //本地调试
-    // baseUrl: 'http://192.168.31.159:8080/diancan' //真机调试,这里的ip地址一定是你电脑的ip
+    // baseUrl: 'http://localhost:8080/diancan' //本地调试
+    baseUrl: 'http://219.224.168.57:8080/diancan' //真机调试,这里的ip地址一定是你电脑的ip
   },
   onLaunch: function () {
     //云开发初始化
