@@ -1,0 +1,35 @@
+<!--pages/administrator/administrator.wxml-->
+<view class="weui-cells__title">| 餐厅</view>
+<view class="category-panel1">
+  <view class="category-panel2">
+    <view bindtap='dishManage' class="category-item">
+      <image class="category-item-image" src="/image/menu.png" />
+      <text class="category-item-text">菜品管理</text>
+    </view>
+    <view bindtap='dishClassify' class="category-item">
+      <image class="category-item-image" src="/image/classify.png" />
+      <text class="category-item-text">菜品分类</text>
+    </view>
+    <view bindtap='orderManage' class="category-item">
+      <image class="category-item-image" src="/image/order.png" />
+      <text class="category-item-text">订单管理</text>
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title">| 其他信息</view>
+<view class="category-panel1">
+  <view class="category-panel2">
+    <view bindtap='adminMessage' class="category-item">
+      <image class="category-item-image" src="/image/staff.png" />
+      <text class="category-item-text">管理人员</text>
+    </view>
+    <view bindtap='slideshowManage' class="category-item">
+      <image class="category-item-image" src="/image/slideshow.png" />
+      <text class="category-item-text">轮播图片</text>
+    </view>
+    <view bindtap='orderManage' class="category-item">
+      <image class="category-item-image" src="/image/statistic.png" />
+      <text class="category-item-text">信息统计</text>
+    </view>
+  </view>
+</view>

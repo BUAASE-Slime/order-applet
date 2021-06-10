@@ -1,0 +1,6 @@
+/* pages/administrator/adminManage/adminManage.wxss */
+@import '../../../wxss/weui.wxss';
+@import '../../../wxss/common.wxss';
+.back {
+  float: right;
+}

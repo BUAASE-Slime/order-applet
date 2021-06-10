@@ -57,7 +57,7 @@
   justify-content: space-around;
   border-radius: 20rpx;
 
-   background-color: white;
+  background-color: white;
 }
 
 .category-item {

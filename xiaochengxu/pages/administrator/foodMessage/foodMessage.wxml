@@ -1,0 +1,44 @@
+<!--pages/administrator/addFood/addFood.wxml-->
+<view class="form">
+  <view class="page-section">
+    <view class="page-section-title">菜品名称（必填）：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入名称" value="{{foodName}}" bindinput="inputName"/>
+      </view>
+    </view>
+    <view class="page-section-title">菜品价格（必填）：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入价格" value="{{foodPrice}}" bindinput="inputPrice"/>
+      </view>
+    </view>
+    <view class="page-section-title">菜品库存（必填）：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入库存" value="{{foodStock}}" bindinput="inputStock"/>
+      </view>
+    </view>
+    <view class="page-section-title">菜品描述：</view>
+    <view class="inputborder">
+      <view class="weui-cell__bd" style="padding-left: 5%" >
+        <input class="weui-input" type="text" placeholder="输入描述" value="{{foodDesc}}" bindinput="inputDescribe"/>
+      </view>
+    </view>
+
+    <view class="page-section-title">所属类目：</view>
+    <view class="select_box">
+      <view class="select" catchtap="selectTap">
+        <text class="select_text">{{selectData[index].leimuName}}</text>
+        <image class='select_img {{show&&"select_img_rotate"}}' src='../../../image/down.png'></image>
+      </view>
+      <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item.leimuName}}</text>
+      </view>
+    </view>
+    
+    <view class="page-section-title">图片（必填）：</view>
+    <image class="weui-uploader__input-box" src="{{uploadImg}}" mode="aspectFill" catchtap="selectImage"/>
+  </view>
+  <button class="submit" bindtap="submit">提交</button>
+</view>

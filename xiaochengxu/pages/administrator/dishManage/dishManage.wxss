@@ -1,0 +1,23 @@
+/* pages/dishManage/dishManage.wxss */
+@import '../../../wxss/weui.wxss';
+@import '../../../wxss/common.wxss';
+.addFood {
+  position: fixed;
+  left: 7%;
+  top: 90%;
+  width: 40px;
+  height: 40px;
+}
+.deleteImg {
+  width: 18px;
+  height: 14px;
+  float: left
+}
+.controlButton {
+  float: left;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.back {
+  float: right;
+}

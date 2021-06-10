@@ -1,0 +1,16 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells__title">类目名称（编号）
+      <view class="back" bindtap="back">返回</view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <block wx:for="{{leimuList}}" wx:key="key">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="changeMessage" data-leimu="{{item}}">
+          <view class="weui-cell__bd" style="font-size: 14px">{{item.leimuName}}（{{item.leimuType}}）</view>
+          <image src="../../../image/cha.png" class="deleteImg" catchtap="removeLeimu" data-id="{{item.leimuId}}"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <image class="addLeimu"  src="../../../image/add.png" catchtap="addLeimu"/>
+</view>

@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells__title">轮播图列表
+      <view class="back" bindtap="back">返回</view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <block wx:for="{{pictures}}" wx:key="key">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="changeMessage" data-picture="{{item}}">
+          <image src="{{item.picUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;" />
+          <view class="weui-cell__bd" style="font-size: 14px">{{item.picId}}</view>
+          <image src="../../../image/cha.png" class="deleteImg" catchtap="removePicture" data-id="{{item.picId}}"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <image class="addPicture"  src="../../../image/add.png" catchtap="addPicture"/>
+</view>
+
