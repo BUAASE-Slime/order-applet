@@ -2,6 +2,8 @@
 
 > 点餐小程序，北航软院大二面向对象大作业
 
+仓库地址：https://github.com/ZewanHuang/Order-Applet
+
 ### 项目结构
 
 本项目使用 SprintBoot 开发后端，微信开发平台开发小程序。
